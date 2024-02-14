@@ -1,0 +1,211 @@
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-size: 13pt;
+  font-family: "Syne Mono", monospace;
+  overflow-x: hidden;
+}
+body .row .col-sm-4 {
+  margin-bottom: 30px;
+}
+body button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 0;
+}
+body button:hover {
+  background-color: black;
+  animation: glitch 0.3s ease-in-out 1 normal both;
+}
+body a {
+  background: none;
+  border: none;
+  color: white;
+  padding: 0;
+}
+body a:hover {
+  background-color: black;
+  text-decoration: none;
+  animation: glitch 0.3s ease-in-out 1 normal both;
+}
+body header {
+  font-size: 16pt;
+}
+body header #header-logo {
+  width: 250pt;
+  height: auto;
+  max-width: 50%;
+}
+body header .header-logo-3deffect {
+  width: 250pt;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  max-width: 50%;
+  opacity: 50%;
+  animation: fade-in 2s ease-in-out 0.5s 1 normal both;
+}
+body header .logo-blue {
+  animation: slide-right 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite alternate both, fade-in 2s ease-in-out 0.5s 1 normal both;
+}
+body header .logo-red {
+  animation: slide-right 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 2s infinite alternate both, fade-in 2s ease-in-out 0.5s 1 normal both;
+}
+body header .links ul {
+  list-style: none;
+  margin-top: 10pt;
+  padding: 0;
+  color: rgb(237, 5, 5);
+}
+body header .links ul li {
+  display: inline;
+  margin: 0px 10pt 0px 10pt;
+}
+body header .links ul li a {
+  text-decoration: none;
+  color: white;
+}
+body header .links ul li a:hover {
+  background-color: rgb(237, 5, 5);
+  -webkit-text-decoration: wavy;
+          text-decoration: wavy;
+  animation: glitch 0.3s ease-in-out 1 normal both;
+}
+body main {
+  max-width: 80%;
+  margin: 52pt auto auto auto;
+}
+body main p {
+  max-width: 600pt;
+  margin-left: auto;
+  margin-right: auto;
+}
+body main .process .steps {
+  width: 50%;
+  float: left;
+  text-align: left;
+  background-color: rgb(255, 0, 0);
+  margin: 0;
+  padding: 12pt;
+}
+body main .process .process-img {
+  width: 50%;
+  float: left;
+  text-align: center;
+  margin: 0;
+  padding: 12pt;
+}
+body main .process .process-img img {
+  width: 80%;
+}
+body main .album-cover {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+body main .album-cover .album-cover-overlay {
+  color: white;
+  position: absolute;
+  background-color: red;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+body main .album-cover .album-cover-overlay h2 {
+  font-size: 26px;
+}
+body main .album-cover .album-cover-overlay button {
+  margin-top: 30px;
+}
+body main .album-cover .album-cover-overlay:hover {
+  opacity: 100%;
+  animation: rotate-text 0.3s ease-in-out 1 normal both;
+}
+body main .album-cover .album-cover-overlay div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+body main .album-cover img {
+  width: 100%;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+}
+body main .album-cover img:hover {
+  opacity: 0%;
+}
+body main .empty {
+  background-color: rgb(32, 32, 32);
+}
+body #type {
+  position: absolute;
+  opacity: 10%;
+  left: 30px;
+  top: 30px;
+  z-index: -1;
+  width: 30%;
+  text-align: left;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-52%);
+  }
+  100% {
+    transform: translateX(-48%);
+  }
+}
+@keyframes glitch {
+  0% {
+    color: aqua;
+  }
+  30% {
+    color: aqua;
+  }
+  31% {
+    color: black;
+    background-color: rgb(255, 255, 255);
+  }
+  60% {
+    color: black;
+    background-color: rgb(255, 255, 255);
+  }
+  61% {
+    color: magenta;
+  }
+  99% {
+    color: magenta;
+  }
+  100% {
+    color: white;
+  }
+}
+@keyframes rotate-text {
+  0% {
+    color: black;
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(20px, -20px) rotate3d(1, 1, 0, 0.05turn);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 50%;
+  }
+}/*# sourceMappingURL=style.css.map */
